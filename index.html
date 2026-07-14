@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Zainab ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap');
+
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+
+margin:0;
+height:100vh;
+background:#000;
+color:white;
+font-family:'Cormorant Garamond',serif;
+overflow:hidden;
+
+}
+
+
+
+.screen{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+
+}
+
+
+
+.container{
+
+width:90%;
+max-width:650px;
+z-index:5;
+
+}
+
+
+
+h1{
+
+font-size:45px;
+font-style:italic;
+color:#8b0015;
+
+text-shadow:
+
+0 0 10px #8b0015,
+0 0 30px #3d0008;
+
+}
+
+
+
+p{
+
+font-size:22px;
+font-style:italic;
+line-height:1.6;
+
+}
+
+
+
+.box{
+
+background:
+
+rgba(8,0,0,.92);
+
+border:
+
+2px solid #8b0015;
+
+border-radius:30px;
+
+padding:35px;
+
+box-shadow:
+
+0 0 50px rgba(139,0,21,.45);
+
+}
+
+
+
+/* OPEN SCREEN */
+
+
+#giftPage{
+
+background:
+
+radial-gradient(circle,#220006,#000 75%);
+
+}
+
+
+
+.intro-card{
+
+animation:
+
+appear 2s ease;
+
+}
+
+
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:scale(.6);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* AVATARS */
+
+
+.avatar-left,
+.avatar-right{
+
+position:absolute;
+
+bottom:0;
+
+width:38%;
+
+max-width:350px;
+
+opacity:.75;
+
+filter:
+
+drop-shadow(0 0 30px #6b0012);
+
+z-index:2;
+
+}
+
+
+
+.avatar-left{
+
+left:-20px;
+
+animation:
+
+leftIn 2s;
+
+}
+
+
+
+.avatar-right{
+
+right:-20px;
+
+animation:
+
+rightIn 2s;
+
+}
+
+
+
+@keyframes leftIn{
+
+from{
+
+transform:translateX(-100px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+@keyframes rightIn{
+
+from{
+
+transform:translateX(100px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(0);
+
+}
+
+}
+
+
+
+/* BUTTON */
+
+
+button{
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:#5c0010;
+
+color:white;
+
+font-size:20px;
+
+font-family:inherit;
+
+cursor:pointer;
+
+box-shadow:
+
+0 0 25px #8b0015;
+
+}
+
+
+
+button:hover{
+
+background:#8b0015;
+
+transform:scale(1.08);
+
+}
+
+
+
+/* BIRTHDAY PAGE */
+
+
+#birthday{
+
+display:none;
+
+height:100vh;
+
+position:relative;
+
+overflow:auto;
+
+background:#000;
+
+}
+
+
+
+.dark{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.55),
+
+rgba(0,0,0,.95)
+
+);
+
+}
+
+
+
+.message{
+
+position:relative;
+
+z-index:5;
+
+width:90%;
+
+max-width:650px;
+
+margin:auto;
+
+padding-top:50px;
+
+}
+
+
+
+.card{
+
+background:
+
+rgba(5,0,0,.94);
+
+border:
+
+2px solid #8b0015;
+
+border-radius:30px;
+
+padding:35px;
+
+box-shadow:
+
+0 0 45px rgba(139,0,21,.55);
+
+}
+
+
+
+.fade{
+
+animation:
+
+fade 1.5s;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:scale(.7);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* CONFETTI */
+
+
+.confetti{
+
+position:absolute;
+
+top:-30px;
+
+z-index:20;
+
+animation:fall linear forwards;
+
+}
+
+
+
+@keyframes fall{
+
+from{
+
+transform:
+
+translateY(0)
+rotate(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:
+
+translateY(110vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- OPEN SCREEN -->
+
+
+<div id="giftPage" class="screen">
+
+
+<img src="billu_avatar.png" class="avatar-left">
+
+
+<img src="zainab_avatar.png" class="avatar-right">
+
+
+
+<div class="container box intro-card">
+
+
+<h1>
+
+For Someone Special ❤️
+
+</h1>
+
+
+
+<p>
+
+A small message made with care, just for you Zainab.
+
+</p>
+
+
+
+<button onclick="openLetter()">
+
+Open Your Birthday Message ✨
+
+</button>
+
+
+</div>
+
+
+</div>
+<!-- BIRTHDAY MESSAGE SCREEN -->
+
+
+<div id="birthday">
+
+
+<img src="billu_avatar.png" class="avatar-left">
+
+
+<img src="zainab_avatar.png" class="avatar-right">
+
+
+
+<div class="dark"></div>
+
+
+
+<div class="message">
+
+
+<div class="card fade">
+
+
+<h1>
+
+Happy Birthday, Zainab ❤️
+
+</h1>
+
+
+
+<p>
+
+Today is a reminder of how amazing and special you are.
+
+</p>
+
+
+
+<p>
+
+I never expected that a simple conversation online would turn into such a meaningful friendship. Somehow, you became someone I genuinely care about and appreciate. ✨
+
+</p>
+
+
+
+<p>
+
+Thank you for the kindness, laughter, and the moments that made ordinary days better. Having someone like you in my life is something I truly value. 🤍
+
+</p>
+
+
+
+<p>
+
+On your special day, I hope you receive the same happiness and warmth that you bring to others. May your dreams come closer, your smile stay bright, and your heart always stay happy. 🌹
+
+</p>
+
+
+
+<p>
+
+Never forget how incredible you are, Zainab. ❤️
+
+</p>
+
+
+
+<p>
+
+Thank you for being my best friend. 🫶
+
+</p>
+
+
+
+<h2>
+
+With lots of wishes ❤️
+
+</h2>
+
+
+
+<p>
+
+— Bilal
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function openLetter(){
+
+
+document.getElementById("giftPage").style.display="none";
+
+
+document.getElementById("birthday").style.display="block";
+
+
+party();
+
+
+}
+
+
+
+
+
+function party(){
+
+
+let effects=[
+
+"✨",
+"⭐",
+"🎉",
+"🎊",
+"💫",
+"🥂"
+
+];
+
+
+
+for(let i=0;i<120;i++){
+
+
+let item=document.createElement("div");
+
+
+item.className="confetti";
+
+
+item.innerHTML =
+
+effects[Math.floor(Math.random()*effects.length)];
+
+
+
+item.style.left =
+
+Math.random()*100+"%";
+
+
+
+item.style.fontSize =
+
+(15 + Math.random()*35)+"px";
+
+
+
+item.style.animationDuration =
+
+(3 + Math.random()*5)+"s";
+
+
+
+item.style.animationDelay =
+
+(Math.random()*3)+"s";
+
+
+
+document.body.appendChild(item);
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
